@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="picofme (2).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- overall Webpage -->
+    <div class="wrapper">
+
+        <!-- header -->
+        <h1>Barix Ka Prediction</h1>
+
+        <!-- tab switch between self and search -->
+        <div class="tab_container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+        <!-- Intro Page Aks for Location Grant For Self -->
+        <div class="sun-container grant-location-container">
+            <img src="Location.png" alt="" width="150" height="150" loading="lazy">
+            <p style="font-size: 50px;">Grant Location Access</p>
+            <p style="font-size: 30px;">Allow Access to Get Weather Information</p>
+            <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- Search tab - Search Section -->
+         <form class="form-container" data-searchForm>
+            <input placeholder="Search For Cities..." data-searchInput class="searchbar">
+            <button class="button-85" role="button">Search</button>
+         </form>
+
+         <ul class="recommended-locations" id="recommended-locations"></ul>
+
+
+         <!-- loading Screen Handle -->
+          <div class="sun-container Loading-container">
+            <img src="loader2.webp" alt="" width="150px" height="150px">
+            <p>Loading</p>
+          </div>
+
+          <!-- Your Weather Ui  also used for Search tab-->
+           <div class="User-Info-Container">
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryIcon class="icons">
+
+            </div>
+
+            <p data-weatherDescription class="des"></p>
+            <img data-WeatherIcon class="weathericon">
+            <p data-temperature class="des1"></p>
+
+        
+            
+            <div class="blocks">
+
+                <div class="parameter">
+                    <img src="wind.png" alt=".">
+                    <p>Wind Speed</p>
+                    <p data-wind-speed class="ptext"></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="Humidity.png" alt=".">
+                    <p>Humidity</p>
+                    <p data-Humidity class="ptext"></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="storm.png" alt=".">
+                    <p>Clouds</p>
+                    <p data-cloudiness class="ptext"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
